@@ -12,15 +12,6 @@ const routes: Routes = [
   {
     path: '',
     component: SourcePage
-  },
-  {
-    path: 'sources',
-    children: [
-      {
-        path: '',
-        loadChildren: '../sources/sources.module#SourcesPageModule'
-      }
-    ]
   }
 ];
 
