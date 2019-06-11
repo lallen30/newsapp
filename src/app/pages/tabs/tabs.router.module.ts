@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { TabsPage } from './tabs.page';
+import { TopNewsPage } from '../top-news/top-news.page';
+import { HeadlinesPage } from '../headlines/headlines.page';
+import { SourcesPage } from '../sources/sources.page';
+import { FavoritesPage } from '../favorites/favorites.page';
+import { SettingsPage } from '../settings/settings.page';
+import { SourcePage } from '../source/source.page';
 
 const routes: Routes = [
   {

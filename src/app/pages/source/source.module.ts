@@ -5,13 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SourcesPage } from './sources.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { SourcePage } from './source.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: SourcesPage
+    component: SourcePage
+  },
+  {
+    path: 'sources',
+    children: [
+      {
+        path: '',
+        loadChildren: '../sources/sources.module#SourcesPageModule'
+      }
+    ]
   }
 ];
 
@@ -21,8 +30,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    PipesModule
+    ComponentsModule
   ],
-  declarations: [SourcesPage]
+  declarations: [SourcePage]
 })
-export class SourcesPageModule {}
+export class SourcePageModule {}
